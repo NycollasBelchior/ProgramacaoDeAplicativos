@@ -1,0 +1,36 @@
+body{
+    background: linear-gradient(rgb(218, 218, 233), rgb(83, 177, 240),rgb(26, 72, 199));
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+html{
+    min-height: 100%;
+}
+
+header{
+    padding: 20px ;
+    background-color: rgb(83, 132, 206);
+}
+
+
+
+select{
+    width: 150px;
+    height: 30px;
+    border-radius: 40% ;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #26379b;
+}
+
+button:hover{
+    background-color: rgb(98, 98, 138);
+    transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+
