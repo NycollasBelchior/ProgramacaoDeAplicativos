@@ -9,41 +9,38 @@
     <script src="back.js" defer></script>
 </head>
 
-
-
-
-
-
-
 <body>  
-    <h1 class="site">Nyck space</h1>
+    
+    <h1 class="titulo">Cadastro </h1>
     <br>
+    <div id="cadastro">
     <input type="text" id="nome"  placeholder="digite seu nome">
     <br><br>
 
-    <input type="password" id="text"><br><br>
+    <input type="password" id="password" placeholder="digite sua senha"><br><br>
   
-    <input type="datetime-local"><br><br>
+    <input type="datetime-local" id="data"><br><br>
        
-    <input type ="file"><br><br>
+    </div>
+  
     
-    <input type = "radio"><br><br>
-    
-    <input type = "checkbox"><br><br>
+<div class="prog">   
+<h2 class="titulo">Você prefere qual linguagem de programação?</h1>
 
+    <div id="linguagens">
     <p>seleção</p>
-    <select name="" id="">
+    <select id="seletorLanguage">
         
-        <option value="">javascript</option>
-        <option value="">python</option>
-        <option value="">JAVA</option>
+        <option value="javascript">javascript</option>
+        <option value="python">python</option>
+        <option value="java">java</option>
 
     </select><br><br>
         
     <p>botão</p>
     <button onclick="clicou()">clique em mim</button>
     <br><br>
-
-
+    </div>
+</div> 
 </body>
 </html>
