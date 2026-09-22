@@ -28,12 +28,13 @@ button{
     position: fixed;
     top: 0px;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.199);
+    background-color: rgb(54, 53, 53);
     display: flex;
     flex-direction: column;
     width: 15vw;
     height: 100vh;
     border-right: 8px double rgba(128, 128, 128, 0.479);
+
 }
 
 .logo{
@@ -77,20 +78,21 @@ button{
     transform: scale(1.05); 
 }
 .menu-item:active{
-    transform: scale(5);
+    transform: scale(1.2);
 }
 
 /*-----------*/
 
-.content{
-    background-color: red;
-    width: 700;
-    margin-left: 300px;
-    margin-top: 100px;
+.content {
+    display: flex;
+    background-color: #fafafa1c;
+    width: 223  vh;
+    height: 200px;
 }
 
-.stories{
-    background-color: blue;
+.stories {
+    padding-top: 50px;
+    padding-left: 500px;
     display: flex;
     flex-direction: row;
     gap: 18px;
@@ -98,33 +100,38 @@ button{
     overflow: hidden;
 }
 
-.story{
-    width: 75px;
+.story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 12px;
     flex-shrink: 0;
 }
 
-.story img{
-width: 100px;
-border-radius: 50%;
-border: 3px solid #000000c0;
-object-fit: cover;
+.story-border {
+    width: 93px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bb5
+    );
 }
 
-.story-border{
-width: 93px;
-height: 93px;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: auto;
-background: linear-gradient(
-    45deg,
-    #feda75,
-    #fa7e1e,
-    #d62976,
-    #962fbf,
-    #4f5bb5 
-);
+.story img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 3px solid #000000c0;
+    object-fit: cover;
 }
