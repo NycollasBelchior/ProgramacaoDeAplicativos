@@ -30,6 +30,7 @@ button{
 }
 
 
+
 /*------------------------*/
 
 .sidebar{
@@ -93,8 +94,10 @@ button{
 
 .content {
     background-color: #202020;
-    width: 700px;
-    margin-left: 750px;
+    width: 750px;
+    max-width: 100%;
+    margin-left: 25vw;
+    margin-right: auto;
 }
 
 .stories {
@@ -241,3 +244,71 @@ button.more{
     font-size: 10px;
     color: #737373;
 }
+
+/*--------------------*/
+
+.suggestions{
+    width: 20vw;
+    height: 40vw;
+    background-color: rgb(43, 43, 43);
+    position: fixed;
+    top: 100px;
+    right: 180px;
+}
+
+.user,
+ .suggestion{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom:  24px;
+    gap: 16px;
+}
+
+.user img{
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user div,
+.suggestion div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.user span,
+.suggestion span{
+    color: #8b8b8b;
+    font-size: 12px;
+}
+
+.user a,
+.suggestion a{
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 45px;
+    background-color: #202020;
+    padding: 15px;
+    border-radius: 40px;
+}
+
+.suggestion-title{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #a8a8a8;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.suggestion img{
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
