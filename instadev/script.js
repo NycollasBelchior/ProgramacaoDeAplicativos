@@ -51,7 +51,7 @@ var posts = [
             {
                 id: 1,
                 username: 'Oliveira_gb',
-                text: "fei pa carai",
+                text: "hahaha",
                 data: '2026-09-28T20:45:00',
             },
 
@@ -63,18 +63,34 @@ var posts = [
             }
         ]
 
-    }
+    },
+
 ]
 
 // FUNÇÕES JS
 
 const feed = document.getElementById('feed');
+const openModal = document.getElementById("openModal");
+const closeModal = document.getElementById("closeModal")
+const modal = document.getElementById("modalPost")
 
 function renderizarPosts() {
     feed.innerHTML = "";
 
     for (let post of posts) {
         let article = document.createElement("article");
+        
+        let commentsHTML = "";
+        for(let comments of post.comment){
+            commentsHTML += 
+            `
+            <p class="comment">
+                        <strong>${comments.username}</strong>
+                        ${comments.text}
+                    </p>
+            `;
+        }
+        
 
         article.innerHTML = `
         <header class="post-header">
@@ -106,20 +122,28 @@ function renderizarPosts() {
 
                     <a href="">Ver todos os 7 comentarios</a>
 
-                    <p class="comment">
-                        <strong></strong>
-                        blalbalbalblalb BLALBALALBLALB blalbalblabla cu
-                    </p>
+                    ${commentsHTML}
 
                     <span class="post-date">
                         ${post.data}
                     </span>
                 </div>
+                <br>
+                <hr>
         `;
 
         feed.appendChild(article)
     }
 
 }
+
+openModal.addEventListener("click", () => {
+    modal.classList.remove("hidden")
+})
+
+botaoFechar.addEventListener("click", () => {
+    modal.classList.add("hidden");
+})
+
 
 renderizarPosts();

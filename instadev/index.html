@@ -41,7 +41,7 @@
                 Notificações
             </a>
 
-            <a href="#" class="menu-item">
+            <a href="#" id="openModal" class="menu-item">
                 <span>➕</span>
                 Criar
             </a>
@@ -62,7 +62,7 @@
             </div>
             <div class="story">
                 <div class="story-border">
-                    <img src="/instadev/gyovanna.png" alt="">
+                    <img src="imgs/gyovanna.png" alt="">
                 </div>
             </div>
 
@@ -103,7 +103,7 @@
         </div>
 
         <div class="suggestion">
-            <img src="gyovanna.png" alt="">
+            <img src="imgs/gyovanna.png" alt="">
             <div>
                 <strong>gyovanna</strong>
                 <span>sugestão para você</span>
@@ -138,6 +138,29 @@
             <a href="#">seguir</a>
         </div>
     </aside>
+
+    <div class="modal hidden" id="modalPost">
+        <div class="modal-content">
+    
+            <div class="modal-header">
+                <h2>Nova publicação</h2>
+                <button id="closeModal">X</button>
+            </div>
+    
+            <div class="modal-body">
+                <label for="imgPost">URL da imagem</label>
+                <input type="text" id="imgPost" placeholder="https://...">
+    
+                <label for="legendPost">Legenda</label>
+                <textarea id="legendPost" placeholder="Digite a legenda..."></textarea>
+    
+                <button id="botaoPublicar" class="botaoPublicar">
+                    Publicar
+                </button>
+            </div>
+    
+        </div>
+    </div>
 
     <script src="script.js" defer></script>
 
