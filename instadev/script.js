@@ -74,23 +74,30 @@ const openModal = document.getElementById("openModal");
 const closeModal = document.getElementById("closeModal")
 const modal = document.getElementById("modalPost")
 
+const botaoPublicar = document.getElementById("botaoPublicar")
+let botoesLike = document.querySelectorAll(".likes");
+
+
 function renderizarPosts() {
+
+
     feed.innerHTML = "";
 
     for (let post of posts) {
         let article = document.createElement("article");
-        
+
         let commentsHTML = "";
-        for(let comments of post.comment){
-            commentsHTML += 
-            `
+        for (let comments of post.comment) {
+            commentsHTML +=
+                `
             <p class="comment">
                         <strong>${comments.username}</strong>
                         ${comments.text}
                     </p>
             `;
         }
-        
+
+
 
         article.innerHTML = `
         <header class="post-header">
@@ -107,7 +114,9 @@ function renderizarPosts() {
                 <img src="${post.img}" class="post-img">
                 <div class="post-actions">
                     <div>
-                        <button>♡</button>
+                            <button class="likes" data-id="${post.id}">
+                            ${post.isLike ? "♥" : "♡"}
+                            </button>
                         <button>○</button>
                         <button>➤</button>
                     </div>
@@ -141,9 +150,67 @@ openModal.addEventListener("click", () => {
     modal.classList.remove("hidden")
 })
 
-botaoFechar.addEventListener("click", () => {
+closeModal.addEventListener("click", () => {
     modal.classList.add("hidden");
 })
 
+document.addEventListener("click", (event) => {
+
+    if (event.target.classList.contains("likes")) {
+
+        let postId = event.target.dataset.id;
+
+        let post = posts.find(post => post.id == postId);
+
+        if (post.isLike == false) {
+
+            post.likes++;
+            post.isLike = true;
+
+        } else {
+
+            post.likes--;
+            post.isLike = false;
+
+        }
+
+        renderizarPosts();
+            
+    }
+
+});
+
+
 
 renderizarPosts();
+
+botaoPublicar.addEventListener("click", () => {
+
+    const imgPost = document.getElementById("imgPost").value;
+    const legendPost = document.getElementById("legendPost").value;
+
+    const novoPost = {
+        id: posts.length + 1,
+
+        user: {
+            nickname: "nyck_belchior",
+            local: "Tijucas - SC",
+            profileImg: "https://github.com/NycollasBelchior.png"
+        },
+
+        img: imgPost,
+        legend: legendPost,
+        likes: 0,
+        isLike: false,
+        data: new Date().toISOString(),
+
+        comment: []
+    };
+
+    posts.push(novoPost);
+
+    renderizarPosts();
+
+    modal.classList.add("hidden");
+});
+
