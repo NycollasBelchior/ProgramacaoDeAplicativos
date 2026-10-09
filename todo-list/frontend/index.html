@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -27,9 +27,9 @@
         </header>
         
         <div class="form-task">
-            <input type="text" id="input-task" placeholder="Digite para marcar sua Tarefa">
+            <input type="text" id="inputtask" placeholder="Digite para marcar sua Tarefa">
 
-            <button type="button">
+            <button type="button" onclick="addTask()">
                 <strong>+</strong> Adicionar Tarefa
             </button>
         </div>
@@ -40,26 +40,8 @@
             <button type="button" class="filter">Concluídas</button>
         </nav>
 
-        <ul id="tasks-List" class="task-List">
-            <li class="task">
-                
-                <button class="button-check">
-                <span class="material-symbols-outlined">
-                    radio_button_unchecked
-                    </span>
-                </button>
-
-                    <span class="task-Text">
-                        Estudar Programação
-                    </span>
-
-                    <button type="button" class="Delete-task" onclick="DeleteTask()">
-                        <span class="material-symbols-outlined">
-                            delete
-                        </span>
-                    </button>
-                    
-            </li>
+        
+        <ul id="tasksList" class="task-List">
             
         </ul>
         

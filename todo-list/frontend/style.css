@@ -138,6 +138,7 @@ button{
     border-radius: 20px;
     align-items: center;
     transition: 1s;
+    margin-top: 10px;
 }
 
 .task-Text{
