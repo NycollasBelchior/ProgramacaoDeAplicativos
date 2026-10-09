@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>TODO List dev</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    
+    <link rel="shortcut icon" href="https://github.com/NycollasBelchior.png" type="">    
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            
+            <div>
+                <h1>Minhas Tarefas</h1>
+                <p>organize seus Dias e suas atividades</p>
+            </div>
+
+            
+            <span class="material-symbols-outlined header-icon">
+                format_list_bulleted_add
+                </span>
+        
+        </header>
+        
+        <div class="form-task">
+            <input type="text" id="input-task" placeholder="Digite para marcar sua Tarefa">
+
+            <button type="button">
+                <strong>+</strong> Adicionar Tarefa
+            </button>
+        </div>
+
+        <nav class="filters">
+            <button type="button" class="filter active"> Todas</button>
+            <button type="button" class="filter">Pendentes</button>
+            <button type="button" class="filter">Concluídas</button>
+        </nav>
+
+        <ul id="tasks-List" class="task-List">
+            <li class="task">
+                
+                <button class="button-check">
+                <span class="material-symbols-outlined">
+                    radio_button_unchecked
+                    </span>
+                </button>
+
+                    <span class="task-Text">
+                        Estudar Programação
+                    </span>
+
+                    <button type="button" class="Delete-task" onclick="DeleteTask()">
+                        <span class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </button>
+                    
+            </li>
+            
+        </ul>
+        
+    </main>
+
+    
+</body>
+</html>

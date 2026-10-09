@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(224, 224, 224);
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+button, input{
+    font: inherit;    
+}
+
+button{
+    cursor: pointer;
+}
+
+/*-----------------------*/
+
+.container{
+    background-color: rgb(238, 238, 238);
+    border-radius: 20px ;
+    padding: 20px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1{
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.header p{
+    color: #68738a;
+}
+
+.header .header-icon{
+    background-color: rgb(197, 197, 197);
+    font-size: 36px;
+    color: rgb(80, 80, 80);
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.form-task{
+    display: flex;
+    background-color: #ffffff;
+    gap: 10px;
+    border-radius:13px ;
+    
+}
+
+.form-task input{
+    flex: 1;
+    border-radius: 30px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    transition: 2s;
+}
+
+.form-task button{
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    border: none;
+    outline: none;
+    margin: 10px 10px ;
+    padding-right: 10px;
+    transition: 1s;
+}
+
+.form-task button:hover{
+    background-color: #bebebe;
+    transform: scale(1.2);
+}
+
+.form-task strong{
+    color: rgb(118, 118, 241);
+    padding: 10px;
+    font-size: 26px;
+}
+
+/*-------------------------*/
+
+.filters{
+    display: flex;
+    gap: 10px;
+    padding-top: 20px ;
+    margin-bottom: 20px;
+}
+
+.filter{
+    border-radius: 20px;
+    padding: 10px 16px;
+    background-color: rgb(219, 219, 219);
+    transition: 1s;
+    border: none;
+}
+
+.filter:hover{
+    background-color: rgb(194, 194, 194);
+    transform: scale(1.1);
+}
+
+.filter.active{
+    background-color: #9c9c9c;
+    color: black;
+    font-weight: bold;
+}
+
+/*-----------------------*/
+
+.tasks-List{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+}
+
+.task{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 20px;
+    align-items: center;
+    transition: 1s;
+}
+
+.task-Text{
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task-complete, .task-text{
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.button-check, .Delete-task{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    border-radius: 20px;
+    background-color: transparent;
+        color: #000000;
+        border: none;
+}
+
+.Delete-task:hover{
+    background-color: #e2e2e2;
+    transition: 0.5s;
+    transform: scale(1.2);
+}
